@@ -5,9 +5,10 @@ import { AppRoutingModule } from './modules/app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { DepartmentsComponent } from './components/departments/departments.component';
+import { TimesheetComponent } from './components/timesheet/timesheet.component';
 
 @NgModule({
-  declarations: [AppComponent, DepartmentsComponent],
+  declarations: [AppComponent, DepartmentsComponent, TimesheetComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
