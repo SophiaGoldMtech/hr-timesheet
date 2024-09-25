@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DepartmentsService } from '../../services/departments.service';
 import { Department } from '../../interfaces/department';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-departments',
@@ -10,7 +11,10 @@ import { Department } from '../../interfaces/department';
 export class DepartmentsComponent implements OnInit {
   departments!: Department[];
 
-  constructor(private departmentsService: DepartmentsService) {}
+  constructor(
+    private departmentsService: DepartmentsService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.departments = this.departmentsService.departments;
