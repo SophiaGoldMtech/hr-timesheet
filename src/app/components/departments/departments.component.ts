@@ -8,9 +8,11 @@ import { Department } from '../../interfaces/department';
   styleUrl: './departments.component.scss',
 })
 export class DepartmentsComponent implements OnInit {
-  departments: Department[];
+  departments!: Department[];
 
   constructor(private departmentsService: DepartmentsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.departments = this.departmentsService.departments;
+  }
 }
